@@ -39,7 +39,7 @@ function App() {
         <Header key="1024" date={date} title={title}/>
         <Main key="1025" url={mediaURL} explanation={explanation} mediaType={mediaType} />
       </div>
-      <Footer />
+        <Footer />
     </div>
   );
 }

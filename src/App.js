@@ -1,30 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import Header from  "./components/Header.js";
+import Main from "./components/Main.js";
+import Footer from "./components/Footer.js";
 
-
-/*
-function App() {
-  // Initialize state to hold the image URL
-  const [dogPic, setDogPic] = useState("");
-  useEffect(() => {
-    // This axios GET request will return a single image
-    axios
-      .get("https://dog.ceo/api/breeds/image/random")
-      // Which we then set to state
-      .then(res => setDogPic(res.data.message))
-      // Always include error handling
-      .catch(err => console.log(err));
-  }, []);
-
-  return (
-    <div className="App">
-      <h1>We Love Puppers</h1>
-      <img src={dogPic} alt="a random dog" />
-    </div>
-  );
-}
-*/
 
 function App() {
 
@@ -49,10 +29,9 @@ axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }

@@ -8,29 +8,33 @@ import Footer from "./components/Footer.js";
 
 function App() {
 
-  const [media, setMedia] = useState("");
+    const [mediaURL, setMediaURL] = useState("");
+    const [date, setDate] = useState("");
+    const [title, setTitle] = useState("");
+    const [explanation, setExplanation] = useState("");
 
-  useEffect(() => {
+
+    useEffect(() => {
 
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
-      .then(res => setMedia(res.data.url))
-      .catch(err => console.log(err));
+        .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+        .then(res => {
+            setMediaURL(res.data.url);
+            setDate(res.data.date);
+            setTitle(res.data.title);
+            setExplanation(res.data.explanation);
 
-  }, []);
+        })
+        .catch(err => console.log(err));
 
-axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
-    .then(data => {
-      console.log(data);
-    })
-    .catch(error => {
-      console.log('problem', error);
-    })
+    }, []);
+
+  
 
   return (
     <div className="App">
-      <Header />
-      <Main />
+      <Header key="1024" date={date} title={title}/>
+      <Main key="1025" url={mediaURL} explanation={explanation} />
       <Footer />
     </div>
   );

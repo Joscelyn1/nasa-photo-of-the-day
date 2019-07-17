@@ -12,17 +12,19 @@ function App() {
     const [date, setDate] = useState("");
     const [title, setTitle] = useState("");
     const [explanation, setExplanation] = useState("");
+    const [mediaType, setMediaType] = useState("");
 
 
     useEffect(() => {
 
     axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+        .get(`https://api.nasa.gov/planetary/apod?api_key=n4Gp2TX87U6izzXVXSRc6rnhznPWModSOO65aWfT`)
         .then(res => {
             setMediaURL(res.data.url);
             setDate(res.data.date);
             setTitle(res.data.title);
             setExplanation(res.data.explanation);
+            setMediaType(res.data.media_type);
 
         })
         .catch(err => console.log(err));
@@ -33,8 +35,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header key="1024" date={date} title={title}/>
-      <Main key="1025" url={mediaURL} explanation={explanation} />
+      <div className="page-container">
+        <Header key="1024" date={date} title={title}/>
+        <Main key="1025" url={mediaURL} explanation={explanation} mediaType={mediaType} />
+      </div>
       <Footer />
     </div>
   );

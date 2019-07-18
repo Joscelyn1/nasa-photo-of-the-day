@@ -62,16 +62,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-footer {
-
-  bottom: 0;
-  position: absolute;
+#text {
+  margin: 10px;
 }
 
 #copyright {
-  position: absolute;
-  left: 35vw;
-  width: 200px;
+  text-align: center;
 
 }
 
@@ -79,8 +75,8 @@ header {
   text-align: center;
 }
 
-.site-title {
-  font-size: 18pt;
+#site-title {
+  color: white;
 
 }
 
@@ -100,11 +96,13 @@ header {
 .video-container {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 .image-container {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

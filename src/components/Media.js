@@ -1,5 +1,6 @@
 import React from "react";
 import Main from "./Main.js";
+import { Image } from 'semantic-ui-react';
 
 
 const Media = (props) => {
@@ -9,7 +10,7 @@ const Media = (props) => {
     if (mediaType === "image") {
         return(
         <div className="image-container">
-            <img className="media" src={props.url}/>
+            <Image src={props.url}/>
         </div>
         )
     }

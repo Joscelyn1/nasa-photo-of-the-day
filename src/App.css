@@ -62,16 +62,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-footer {
 
-  bottom: 0;
-  position: absolute;
-}
 
 #copyright {
-  position: absolute;
-  left: 35vw;
-  width: 200px;
+  text-align: center;
 
 }
 
@@ -79,8 +73,9 @@ header {
   text-align: center;
 }
 
-.site-title {
+#site-title {
   font-size: 18pt;
+  color: white;
 
 }
 

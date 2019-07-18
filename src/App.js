@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import Header from  "./components/Header.js";
+import HeaderPage from  "./components/HeaderPage.js";
 import Main from "./components/Main.js";
 import Footer from "./components/Footer.js";
 
@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <div className="page-container">
-        <Header key="1024" date={date} title={title}/>
+        <HeaderPage key="1024" date={date} title={title}/>
         <Main key="1025" url={mediaURL} explanation={explanation} mediaType={mediaType} />
       </div>
         <Footer />

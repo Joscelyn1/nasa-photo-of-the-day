@@ -6,7 +6,7 @@ import { Container } from 'semantic-ui-react';
 const Main = (props) => {
     return (
       <main>
-        <Container>
+        <Container id="text">
             <Media key="1026" url={props.url} mediaType={props.mediaType}/>
             <Container text>
               <p>{props.explanation}</p>
